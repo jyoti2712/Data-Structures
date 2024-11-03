@@ -12,7 +12,7 @@ int linearSearch(int arr[], int n, int num){
 
 int main(){
     int n = 10;
-    int arr[] = {2, 54, 6, 1, 56, 85, 83, 78, 3, 98};
+    int arr[] = {2, 54, 6, 1, 56, 85, 83, 78, 3, 99};
     int num = 85;
     linearSearch(arr, n, num);
     cout<< endl;
