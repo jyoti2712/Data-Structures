@@ -26,7 +26,22 @@ int main() {
 
 // Time complexity of this approach is O(n^3)
 
-// Kadane's Algorithm  
+//Better Approach
+int main() {
+    int maxSum = INT_MIN;
+    for( int st = 0; st < n; st++) {
+        int sum = 0;
+        for( int en = st; en < n; en++) {
+            sum += a[en];
+            maxSum = max(maxSum, sum);
+        }
+    }
+}
+
+// Time complexity of this approach is O(n^2)
+
+// Optimal Approach
+// Kadane's Algorithm
 
 int main() {
     int a[] = {1, 2, 3, -2, 5}; // Example array
