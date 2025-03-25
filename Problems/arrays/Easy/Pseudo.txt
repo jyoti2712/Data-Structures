@@ -1,0 +1,12 @@
+
+1. Largest Element in an array
+
+function LargestElement(arr){
+    max = arr[0]
+    for i= 0  to n{
+        if arr[i] > max 
+        max = arr[i];
+    }
+    return max;
+}
+

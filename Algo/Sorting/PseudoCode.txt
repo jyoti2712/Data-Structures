@@ -1,0 +1,74 @@
+
+------------------------------------------------Merge Sort-------------------------------------------------------------------------------------------------------------------------------
+function merge(arr, low, mid, high){
+left = low;
+right = mid+1;
+arr temp[];
+while(left <= mid and right <= high)
+{
+if(arr[left] > arr[right])
+{
+temp.add(arr[right]);
+right++;
+}
+else{
+temp.add(arr[left]);
+left++;
+}
+}
+
+while (left <= mid){
+temp.add(arr[left]);
+left++;
+}
+
+while(right <= high){
+temp.add(arr[right]);
+right++;
+}
+}
+
+function merge_sort(arr, low, high)
+{
+if(low >= high) return;
+int mid = low + high / 2;
+merge_sort(arr, low , mid);
+merge_sort(arr, mid+1, high);
+merge(arr,low, mid, high);
+}
+
+--------------------------------------------------------------------Quick Sort---------------------------------------------------------------------------------------------------
+
+
+function partition(arr, low, high){
+pivot = arr[low];
+i = low;
+j = high;
+
+while ( i < j){
+    while(arr[i] <= arr[pivot] && i < high){
+        i++;
+    }
+    while (arr[j] > arr[pivot] && j >= low+1){
+        j--;
+    }
+    if(i < j) swap(arr[i], arr[j]);
+}
+swap (arr[low], arr[j])
+return j
+}
+
+function qs(arr, low, high){
+    if(low < high){
+    int pInd = partition(arr, low, high);
+    qs(arr, low, pInd);
+    qs(arr, pInd+1, high);
+    }
+}
+
+function quick_sort(arr){
+    qs(arr, 0, n-1);
+    return arr;
+}
+
+---------------------------
